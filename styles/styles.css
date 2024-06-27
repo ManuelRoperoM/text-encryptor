@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    --color-primary: #0A3871;
+    --color-secundario: #D8DFE8;
+    --color-terciario: #495057;
+    --color-cuaternario: #343A40;
+    --color-hover-primary: #3e6391d3;
+    --color-hover-terciario: #80868dd3;
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 16px; 
+    /* 1rem = 16px */
+}
+
+.header__image{
+    width: 120px;
+    height: 48px;
+    margin-top: 40px;
+    margin-left: 48px;
+}
+.main{
+    display: flex;
+    gap: 86px;
+}
+.main__text {
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.main__text__title{
+    font-family: var(--fuente-inter);
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.main__text__area{
+    margin: 15px 0px;
+    width: 680px;
+    height: 500px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-secundario);
+    font-size: 1rem;
+    color: var(--color-terciario);
+    font-family: var(--fuente-krona);
+    padding: 5px;
+}
+.main__text__parrafo{
+    font-family: var(--fuente-inter);
+    color: var(--color-terciario);
+    font-size: 0.75rem ;
+    display: flex;
+    gap: 3px;
+}
+.main__text__buttons{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.main__text__buttons .encriptar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-secundario);
+}
+.main__text__buttons .encriptar:hover{
+    background-color: var(--color-hover-primary);
+}
+.main__text__buttons .desencriptar:hover{
+    background-color: var(--color-hover-terciario);
+    border: none;
+}
+.main__text__buttons .desencriptar{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.main__pictuare{
+    margin-top: 94px;
+}
+.main__pictuare__doll{
+    width: 336;
+    height: 304;
+}
+.main__pictuare__subtitle{
+    margin-top: 32px;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    color: var(--color-cuaternario);
+    font-weight: bold;
+}
+.main__pictuare__parrafo{
+    margin-top: 12px;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    color: var(--color-terciario);
+}
