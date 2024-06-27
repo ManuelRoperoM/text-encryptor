@@ -17,22 +17,22 @@
 
 html{
     font-size: 16px; 
-    /* 1rem = 16px */
 }
 
 .header__image{
     width: 120px;
     height: 48px;
-    margin-top: 40px;
-    margin-left: 48px;
+    margin-top: 4.347dvh;
+    margin-left: 0.5%;
+    padding-left: 0px;
 }
 .main{
     display: flex;
-    gap: 86px;
+    gap: 10.5dvh;
+    justify-content: center;
 }
 .main__text {
     margin-top: 20px;
-    margin-left: 200px;
 }
 
 .main__text__title{
@@ -45,7 +45,7 @@ html{
     margin: 15px 0px;
     width: 680px;
     height: 500px;
-    border-radius: 5px;
+    border-radius: 0.8dvh;
     border: 1px solid var(--color-primary);
     background-color: var(--color-secundario);
     font-size: 1rem;
@@ -66,8 +66,8 @@ html{
     justify-content: space-between;
 }
 .main__text__buttons .encriptar{
-    width: 328px;
-    height: 67px;
+    width: 48%;
+    height: 9dvh;
     border-radius: 24px;
     background-color: var(--color-primary);
     border: none;
@@ -81,8 +81,8 @@ html{
     border: none;
 }
 .main__text__buttons .desencriptar{
-    width: 328px;
-    height: 67px;
+    width: 48%;
+    height: 9dvh;
     border-radius: 24px;
     background-color: var(--color-secundario);
     border: 1px solid var(--color-primary);
@@ -90,21 +90,21 @@ html{
 }
 
 .main__pictuare{
-    margin-top: 94px;
+    margin-top: 15.5dvh;
 }
 .main__pictuare__doll{
-    width: 336;
-    height: 304;
+    width: 41dvh;
+    height: 37dvh;
 }
 .main__pictuare__subtitle{
-    margin-top: 32px;
+    margin-top: 15px;
     font-family: var(--fuente-inter);
     font-size: 1.5rem;
     color: var(--color-cuaternario);
     font-weight: bold;
 }
 .main__pictuare__parrafo{
-    margin-top: 12px;
+    margin-top: 8px;
     font-family: var(--fuente-inter);
     font-size: 1rem;
     color: var(--color-terciario);
