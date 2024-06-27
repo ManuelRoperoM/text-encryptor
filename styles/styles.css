@@ -89,6 +89,11 @@ html{
     color: var(--color-primary);
 }
 
+.disabled-button {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .main__pictuare{
     margin-top: 15.5dvh;
 }

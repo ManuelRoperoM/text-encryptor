@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Encryptor</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./encryptor.js"></script>
 </head>
 <body>
     <header>
@@ -13,11 +14,11 @@
     <main class="main">
         <div class="main__text">
             <h1 class="main__text__title">Ingrese el texto aqui</h1>
-            <textarea class="main__text__area" name="text-user" id="text-user" placeholder="Este es mi mensaje secreto..."></textarea>
+            <textarea oninput="textChange()" class="main__text__area" name="text-user" id="text-user" placeholder="Este es mi mensaje secreto..."></textarea>
             <p class="main__text__parrafo"><img src="./assets/Vector.png" alt="icono de warning"> solo letras minúsculas y sin acentos</p>
             <div class="main__text__buttons">
-                <button class="encriptar">Encriptar</button>
-                <button class="desencriptar">Desencriptar</button>
+                <button id="encrypt" onclick="encryptor()" class="encriptar">Encriptar</button>
+                <button id="unencrypt" class="desencriptar">Desencriptar</button>
             </div>
         </div>
         <div class="main__pictuare">
