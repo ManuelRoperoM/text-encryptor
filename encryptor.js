@@ -57,3 +57,37 @@ const encryptor = () => {
         enabled()
     }
 }
+
+const decryptor = () => {
+    const textArea = document.getElementById('text-user').value
+    if (textArea) {
+        let decrypt = ''
+        for (let i = 0; i < textArea.length; i++) {
+            console.log(textArea[i]);
+            if(textArea[i] == 'a'){
+                decrypt += 'a'
+                i++
+            }else if(textArea[i] == 'e'){
+                decrypt += 'e'
+                i = i+4
+            }else if(textArea[i] == 'i'){
+                decrypt += 'i'
+                i = i+3
+            }else if(textArea[i] == 'o'){
+                decrypt += 'o'
+                i = i+3
+            }else if(textArea[i] == 'u'){
+                decrypt += 'u'
+                i = i+3
+            }else{
+                decrypt += textArea[i]
+            }
+        }
+        disabled()
+        const encryptedMssge = document.getElementById('encrypted-message')
+        encryptedMssge.style.display = 'flex'
+        encryptedMssge.innerHTML = decrypt
+    }else{
+        enabled()
+    }
+}
