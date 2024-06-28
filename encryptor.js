@@ -2,17 +2,20 @@ const textChange = () => {
     const textArea = document.getElementById('text-user').value
     const encryptButton = document.getElementById('encrypt')
     const unencryptButton = document.getElementById('unencrypt')
+    const infoMsge = document.getElementById('info')
     const regex = /^[a-z\s]*$/
     if (!regex.test(textArea)) {
         encryptButton.disabled = true
         unencryptButton.disabled = true
         encryptButton.classList.add('disabled-button')
         unencryptButton.classList.add('disabled-button')
+        infoMsge.classList.add('main__text__parrafo__red')
     }else{
         encryptButton.disabled = false
         unencryptButton.disabled = false
         encryptButton.classList.remove('disabled-button')
         unencryptButton.classList.remove('disabled-button')
+        infoMsge.classList.remove('main__text__parrafo__red')
     }
 }
 
@@ -21,12 +24,14 @@ function disabled(){
     document.getElementById('pictuare-subtitle').classList.add('hidden')
     document.getElementById('pictuare-parrafo').classList.add('hidden')
     document.getElementById('encrypted-message').classList.remove('hidden')
+    document.getElementById('btnCopy').classList.remove('hidden')
 }
 function enabled(){
     document.getElementById('doll-img').classList.remove('hidden')
     document.getElementById('pictuare-subtitle').classList.remove('hidden')
     document.getElementById('pictuare-parrafo').classList.remove('hidden')
     document.getElementById('encrypted-message').classList.add('hidden')
+    document.getElementById('btnCopy').classList.add('hidden')
 }
 
 const encryptor = () => {
@@ -52,6 +57,7 @@ const encryptor = () => {
         encryptedMssge.style.display = 'flex'
         encryptedMssge.innerHTML = encryptText
         console.log(encryptText)
+        document.getElementById('copy').innerText = 'Copiar'
     }else{
         console.log('texto vacio');
         enabled()
@@ -87,7 +93,19 @@ const decryptor = () => {
         const encryptedMssge = document.getElementById('encrypted-message')
         encryptedMssge.style.display = 'flex'
         encryptedMssge.innerHTML = decrypt
+        document.getElementById('copy').innerText = 'Copiar'
     }else{
         enabled()
     }
+}
+
+const copy = () => {
+    const textCopy = document.getElementById('encrypted-message').textContent
+    console.log(textCopy);
+    navigator.clipboard.writeText(textCopy).then(() => {
+        console.log('Texto copiado al portapapeles');
+        document.getElementById('copy').innerText = 'Copiado'
+    }).catch(err => {
+        console.error('Error al copiar al portapapeles: ', err);
+    });
 }

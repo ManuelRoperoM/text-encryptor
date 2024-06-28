@@ -60,6 +60,9 @@ html{
     display: flex;
     gap: 3px;
 }
+.main__text__parrafo__red{
+    color: rgb(196, 67, 67);
+}
 .main__text__buttons{
     margin-top: 15px;
     display: flex;
@@ -119,6 +122,26 @@ html{
     font-family: var(--fuente-inter);
     font-size: 1.5rem;
     color: var(--color-terciario);
+    border: 2px solid rgb(95, 95, 95);
+    padding: 2%;
+    border-radius: 0.8dvh;
+    width: 28rem;
+}
+.main__pictuare__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.main__pictuare__button .copy{
+    width: 30%;
+    height: 6dvh;
+    border-radius: 24px;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-secundario);
+}
+.main__pictuare__button .copy:hover{
+    background-color: var(--color-hover-primary);
 }
 footer{
     margin-top: 30px;
@@ -138,7 +161,7 @@ footer{
 
 /* Vista tablet menor de 1250 */
 
-@media (max-width: 1250px){
+@media (max-width: 1449px){
     .main{
         margin-top: 80px;
         flex-direction: column;
@@ -149,6 +172,9 @@ footer{
     }
     .main__pictuare__doll{
         display: none;
+    }
+    .main__pictuare__parrafo_encrypted{
+        width: 680px;
     }
 }
 
@@ -193,6 +219,7 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 90%;
     }
     .main__pictuare__subtitle{
         font-size: 1.2rem;
@@ -201,7 +228,12 @@ footer{
         font-size: 0.8rem;
     }
     .main__pictuare__parrafo_encrypted{
+        width: 100%;
         font-size: 1rem;
+    }
+    .main__pictuare__button{
+        width: 100%;
+        
     }
     footer{
         margin-top: 30px;

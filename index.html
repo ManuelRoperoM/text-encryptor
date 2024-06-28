@@ -15,7 +15,7 @@
         <div class="main__text">
             <h1 class="main__text__title">Ingrese el texto aqui</h1>
             <textarea oninput="textChange()" class="main__text__area" name="text-user" id="text-user" placeholder="Este es mi mensaje secreto..."></textarea>
-            <p class="main__text__parrafo"><img src="./assets/Vector.png" alt="icono de warning"> solo letras minúsculas y sin acentos</p>
+            <p id="info" class="main__text__parrafo"><img src="./assets/Vector.png" alt="icono de warning"> solo letras minúsculas y sin acentos</p>
             <div class="main__text__buttons">
                 <button id="encrypt" onclick="encryptor()" class="encriptar">Encriptar</button>
                 <button id="unencrypt" onclick="decryptor()" class="desencriptar">Desencriptar</button>
@@ -26,6 +26,9 @@
             <h2 id="pictuare-subtitle" class="main__pictuare__subtitle">Ningún mensaje fue encontrado</h2>
             <p id="pictuare-parrafo" class="main__pictuare__parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
             <p id="encrypted-message" class="main__pictuare__parrafo_encrypted" style="display: none;"></p>
+            <div id="btnCopy" class="main__pictuare__button">
+                <button id="copy" onclick="copy()" class="copy">Copiar</button>
+            </div>
         </div>
     </main>
     <footer>
